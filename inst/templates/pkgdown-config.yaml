@@ -39,10 +39,7 @@ navbar:
     left:  [intro, examples, articles]
     right: [reference, news, github]
   components:
-    home: ~
-    examples:
-      text: Examples
-      href: articles/articles/examples.html
+    home:
     articles:
       text: Articles
       menu:
