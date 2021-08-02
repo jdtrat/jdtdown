@@ -1,7 +1,11 @@
 destination: {{ destdir }}
 
-# If relevant, set the url parameter by uncommenting the line below.
-# url:
+url: https://{{{ Package }}}.jdtrat.com
+repo:
+    home: https://github.com/jdtrat/{{{ Package }}}/
+    source: https://github.com/jdtrat/{{{ Package }}}/blob/master/
+    issue: https://github.com/jdtrat/{{{ Package }}}/issues/
+    user: https://github.com/jdtrat/
 
 template:
   package: jdtdown
@@ -13,14 +17,17 @@ template:
       creator: "@rstudio"
       card: summary
 
+authors:
+  Jonathan Trattner:
+    href: "https://jdtrat.com"
+
 development:
-  version_tooltip: "Development version"
+  mode: auto
 
 home:
-  strip_header: false
+  strip_header: true
   links:
   - text: Learn more
-    # if relevant, set url to another website i.e https://rmarkdown.rstudio.com
     href: ""
 
 # structure of website themed with jdtdown
