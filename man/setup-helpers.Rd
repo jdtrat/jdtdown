@@ -15,7 +15,7 @@ use_contributing()
 
 use_readme_jdt()
 
-use_jdtdown(config_file = "_pkgdown.yml", destdir = "reference")
+use_jdtdown(config_file = "_pkgdown.yml", destdir = "docs")
 
 use_gha_pkgdown()
 }
@@ -24,7 +24,7 @@ use_gha_pkgdown()
 \verb{pkgdown/} subfolder.}
 
 \item{destdir}{Target directory for pkgdown docs. By default, it will be in
-\code{reference} sub directory for R Markdown related package using \strong{jdtdown}.}
+\code{docs} sub directory for packages using \strong{jdtdown}.}
 }
 \description{
 These helper are mostly inspired by the one in \strong{usethis} from the tidyverse
