@@ -14,7 +14,7 @@ template:
       src: man/figures/logo.png
       alt: "{{{ Package }}} package"
     twitter:
-      creator: "@rstudio"
+      creator: "@jdtrat"
       card: summary
 
 authors:
