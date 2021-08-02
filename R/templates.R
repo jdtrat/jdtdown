@@ -106,7 +106,10 @@ use_jdtdown <- function(config_file = "_pkgdown.yml", destdir = "docs") {
 #' @export
 #' @rdname setup-helpers
 use_gha_pkgdown <- function() {
-  usethis::use_github_action("pkgdown")
+  check_installed("usethis")
+  use_dot_github()
+  template <- find_template("pkgdown-gha.yaml", package = "jdtdown")
+  usethis::use_github_action(url = template, save_as = "pkgdown.yaml", ignore = TRUE, open = FALSE)
   usethis::ui_todo("Create a gh-pages branch by typing the following into the terminal:
                  {usethis::ui_code_block(\"
                    git checkout --orphan gh-pages
@@ -117,5 +120,5 @@ use_gha_pkgdown <- function() {
                    \", copy = TRUE)}")
   usethis::ui_info("For more information on the above terminal code, or deploying to GitHub Pages, visit
                    {usethis::ui_value('<https://orchid00.github.io/actions_sandbox/websites-using-pkgdown-bookdown-and-blogdown.html>')}")
-  usethis::ui_todo("Be sure to register the {usethis::ui_field('CNAME')} for '{project_name()}'.jdtrat.com/ on {usethis::ui_value('<https://netlify.com/>')}.")
+  usethis::ui_todo("Be sure to register the {usethis::ui_field('CNAME')} for {project_name()}.jdtrat.com/ on {usethis::ui_value('<https://netlify.com/>')}.")
 }

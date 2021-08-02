@@ -15,3 +15,4 @@ use_template <- function(...) {
 github_url <- utils::getFromNamespace("github_url", "usethis")
 project_name <- utils::getFromNamespace("project_name", "usethis")
 use_dot_github <- utils::getFromNamespace("use_dot_github", "usethis")
+find_template <- utils::getFromNamespace("find_template", "usethis")
