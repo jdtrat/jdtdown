@@ -1,6 +1,6 @@
 # jdtdown
 
-#### Subtitle!
+#### 'pkgdown' Package Template for Jonathan Trattner
 
 <!-- badges: start -->
 
@@ -10,9 +10,9 @@
 
 ------------------------------------------------------------------------
 
-<img src="https://jdtrat.com/project/jdtdown/featured-hex.png" width="328" height="378" align="right"/>
+<!-- <img src="https://jdtrat.com/project/jdtdown/featured-hex.png" width="328" height="378" align="right"/> -->
 
-jdtdown provides ...
+jdtdown is a package that provides [pkgdown](https://pkgdown.r-lib.org/) template for packages developed by Jonathan Trattner. It relies primarily on code from RStudio's [quillt](https://pkgs.rstudio.com/quillt/index.html) package by [Alison Hill](https://alison.rbind.io), Desirée De Leon, and [Christophe Dervieux](https://cderv.rbind.io/).
 
 ## Table of contents
 
@@ -39,9 +39,11 @@ library(jdtdown)
 
 ## Getting Started
 
+Coming soon...
+
 ## Further Reading
 
-For a more in-depth explanation of jdtdown, please see ...
+For a more in-depth explanation of jdtdown, please see *also coming soon...*
 
 ## Feedback
 
