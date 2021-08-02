@@ -1,0 +1,10 @@
+pandoc: 2.7.3
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  jdtdown: jdtdown.html
+last_built: 2021-08-02T14:39Z
+urls:
+  reference: https://jdtdown.jdtrat.com/reference
+  article: https://jdtdown.jdtrat.com/articles
+
