@@ -1,13 +1,29 @@
 Package: jdtdown
 Title: 'pkgdown' Template for JDT
-Version: 0.0.0.9000
-Authors@R: 
+Version: 0.0.1
+Authors@R: c(
     person(given = "Jonathan",
            family = "Trattner",
            role = c("aut", "cre"),
            email = "jdt@jdtrat.com",
-           comment = c(ORCID = "0000-0002-1097-7603"))
-Description: jdtdown is a pkgdown template for packages built by JDT.
+           comment = c(ORCID = "0000-0002-1097-7603")),
+    person(given = "Alison", 
+           family = "Hill", 
+           role = "ctb",
+           comment = c("Author and Maintainer of 'quillt'.", ORCID = "0000-0002-8082-1890")),
+    person(given = "Desirée", 
+           family = "De Leon", 
+           role = "ctb",
+           comment = c("Author of 'quillt'.", ORCID = "0000-0003-2217-9067")),
+    person(given = "Christophe", 
+           family = "Dervieux", 
+           role = c("ctb"), 
+           comment = c("Author of 'quillt'.", ORCID = "0000-0003-4474-2498")),
+    person("RStudio",
+            role = "cph", 
+            comment = c("Copyright holder of 'quillt'."))
+    )
+Description: jdtdown is a pkgdown template for packages built by JDT. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: es
@@ -19,4 +35,6 @@ Imports:
     pkgdown (>= 1.1.0.9000),
     htmltools,
     yaml,
-    plyr
+    plyr,
+    utils,
+    usethis
