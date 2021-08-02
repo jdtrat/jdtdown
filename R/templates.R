@@ -59,9 +59,9 @@ use_readme_jdt <- function() {
 #' @param config_file Path to the pkgdown yaml config file - could be set to be
 #'   `pkgdown/` subfolder.
 #' @param destdir Target directory for pkgdown docs. By default, it will be in
-#'   `reference` sub directory for R Markdown related package using **jdtdown**.
+#'   `docs` sub directory for packages using **jdtdown**.
 #' @rdname setup-helpers
-use_jdtdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
+use_jdtdown <- function(config_file = "_pkgdown.yml", destdir = "docs") {
   check_installed("usethis")
   if (!file.exists(usethis::proj_path("README.md"))) use_readme_jdt()
   usethis::ui_info("Creating assets for using jdtdown templated pkgdown website.")
@@ -117,8 +117,5 @@ use_gha_pkgdown <- function() {
                    \", copy = TRUE)}")
   usethis::ui_info("For more information on the above terminal code, or deploying to GitHub Pages, visit
                    {usethis::ui_value('<https://orchid00.github.io/actions_sandbox/websites-using-pkgdown-bookdown-and-blogdown.html>')}")
+  usethis::ui_todo("Be sure to register the {usethis::ui_field('CNAME')} for '{project_name()}'.jdtrat.com/ on {usethis::ui_value('<https://netlify.com/>')}.")
 }
-
-
-
-
