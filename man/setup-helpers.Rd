@@ -4,17 +4,20 @@
 \alias{setup-helpers}
 \alias{use_coc}
 \alias{use_contributing}
-\alias{use_jdt_readme}
+\alias{use_readme_jdt}
 \alias{use_jdtdown}
+\alias{use_gha_pkgdown}
 \title{Helpers for project setup with jdtdown}
 \usage{
 use_coc()
 
 use_contributing()
 
-use_jdt_readme()
+use_readme_jdt()
 
 use_jdtdown(config_file = "_pkgdown.yml", destdir = "reference")
+
+use_gha_pkgdown()
 }
 \arguments{
 \item{config_file}{Path to the pkgdown yaml config file - could be set to be
@@ -31,8 +34,12 @@ team and are useful to setup a new pkgdown project with \strong{jdtdown}
 \itemize{
 \item \code{use_coc()}: put _CODE\_OF\\emph{CONDUCT.md} in \verb{.github/} directory setting the
 contact email to jdt's.
-\item \code{use_contributing()}: Add a \emph{CONTRIBUTING.md} file in \verb{.github/} following a
-template in \strong{jdtdown}. Inspired by \code{usethis::use_tidy_contributing()}.
-\item \code{use_jdt_readme()}: Add a \emph{README.md} file in the structure used by JDT's packages.
+\item \code{use_contributing()}: Add a \emph{CONTRIBUTING.md} file in \verb{.github/} following
+a template in \strong{jdtdown}. Inspired by \code{usethis::use_tidy_contributing()}.
+\item \code{use_readme_jdt()}: Add a \emph{README.md} file in the structure used by JDT's
+packages.
+\item \code{use_gha_pkgdown()}: Add a GitHub Actions workflow for deploying the
+'pkgdown' site and copy terminal code necessary to create an orphan
+'gh-pages' branch.
 }
 }

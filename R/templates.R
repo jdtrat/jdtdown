@@ -8,11 +8,19 @@
 #' + `use_coc()`: put _CODE\_OF\_CONDUCT.md_ in `.github/` directory setting the
 #' contact email to jdt's.
 #'
-#' + `use_contributing()`: Add a _CONTRIBUTING.md_ file in `.github/` following a
-#' template in **jdtdown**. Inspired by `usethis::use_tidy_contributing()`.
+#' + `use_contributing()`: Add a _CONTRIBUTING.md_ file in `.github/` following
+#' a template in **jdtdown**. Inspired by `usethis::use_tidy_contributing()`.
 #'
-#' + `use_jdt_readme()`: Add a _README.md_ file in the structure used by JDT's packages.
+#' + `use_readme_jdt()`: Add a _README.md_ file in the structure used by JDT's
+#' packages.
+#'
+#' + `use_gha_pkgdown()`: Add a GitHub Actions workflow for deploying the
+#' 'pkgdown' site and copy terminal code necessary to create an orphan
+#' 'gh-pages' branch.
+#'
 #' @name setup-helpers
+#'
+#'
 NULL
 
 #' @export
@@ -39,7 +47,7 @@ use_contributing <- function() {
 
 #' @export
 #' @rdname setup-helpers
-use_jdt_readme <- function() {
+use_readme_jdt <- function() {
   check_installed("usethis")
   data <- list(Package = usethis:::project_name())
   use_template("jdt-readme.md",
@@ -92,5 +100,25 @@ use_jdtdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
                    with {usethis::ui_code('usethis::use_logo()')}.")
   usethis::ui_todo("Check and adapt configuration in {usethis::ui_field(config_file)}.")
   usethis::ui_todo("Add learning resources to  {usethis::ui_field(intro_rmd)} for the Get Started section.")
-  usethis::ui_todo("Add github action workflow with {usethis::ui_code('jdtdown::use_github_action()')}")
+  usethis::ui_todo("Add github action workflow with {usethis::ui_code('jdtdown::use_gha_pkgdown()')}")
 }
+
+#' @export
+#' @rdname setup-helpers
+use_gha_pkgdown <- function() {
+  usethis::use_github_action("pkgdown")
+  usethis::ui_todo("Create a gh-pages branch by typing the following into the terminal:
+                 {usethis::ui_code_block(\"
+                   git checkout --orphan gh-pages
+                   git rm -rf .
+                   git commit --allow-empty -m 'Initial gh-pages commit'
+                   git push origin gh-pages
+                   git checkout master
+                   \", copy = TRUE)}")
+  usethis::ui_info("For more information on the above terminal code, or deploying to GitHub Pages, visit
+                   {usethis::ui_value('<https://orchid00.github.io/actions_sandbox/websites-using-pkgdown-bookdown-and-blogdown.html>')}")
+}
+
+
+
+

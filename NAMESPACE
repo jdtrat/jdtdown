@@ -2,5 +2,6 @@
 
 export(use_coc)
 export(use_contributing)
-export(use_jdt_readme)
+export(use_gha_pkgdown)
 export(use_jdtdown)
+export(use_readme_jdt)
