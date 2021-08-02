@@ -27,8 +27,8 @@ NULL
 #' @rdname setup-helpers
 use_coc <- function() {
   check_installed("usethis")
-  usethis:::use_dot_github()
-  data <- list(Package = usethis:::project_name())
+  use_dot_github()
+  data <- list(Package = project_name())
   use_template("CODE_OF_CONDUCT.md",
                file.path(".github", "CODE_OF_CONDUCT.md"),
                data = data)
@@ -38,8 +38,8 @@ use_coc <- function() {
 #' @rdname setup-helpers
 use_contributing <- function() {
   check_installed("usethis")
-  usethis:::use_dot_github()
-  data <- list(Package = usethis:::project_name())
+  use_dot_github()
+  data <- list(Package = project_name())
   use_template("CONTRIBUTING.md",
                file.path(".github", "CONTRIBUTING.md"),
                data = data)
@@ -49,7 +49,7 @@ use_contributing <- function() {
 #' @rdname setup-helpers
 use_readme_jdt <- function() {
   check_installed("usethis")
-  data <- list(Package = usethis:::project_name())
+  data <- list(Package = project_name())
   use_template("jdt-readme.md",
                file.path("README.md"),
                data = data)
@@ -63,16 +63,16 @@ use_readme_jdt <- function() {
 #' @rdname setup-helpers
 use_jdtdown <- function(config_file = "_pkgdown.yml", destdir = "reference") {
   check_installed("usethis")
-  if (!file.exists(usethis::proj_path("README.md"))) use_jdt_readme()
+  if (!file.exists(usethis::proj_path("README.md"))) use_readme_jdt()
   usethis::ui_info("Creating assets for using jdtdown templated pkgdown website.")
   # Create destdir if it does not exist
   usethis::use_directory(destdir)
 
   # Add pkgdown config to use with jdtdown
   usethis::ui_info("Adding pkgdown config for jdtdown-like project.")
-  data <- list(Package = usethis:::project_name(),
+  data <- list(Package = project_name(),
                destdir = destdir,
-               github_url = usethis:::github_url())
+               github_url = github_url())
   use_template("pkgdown-config.yaml", "_pkgdown.yml", data = data)
   usethis::use_build_ignore(c(config_file, destdir, "pkgdown"))
   usethis::use_git_ignore(destdir)

@@ -11,3 +11,7 @@ check_installed <- function(pkgs) {
 use_template <- function(...) {
   usethis::use_template(..., package = "jdtdown")
 }
+
+github_url <- utils::getFromNamespace("github_url", "usethis")
+project_name <- utils::getFromNamespace("project_name", "usethis")
+use_dot_github <- utils::getFromNamespace("use_dot_github", "usethis")
