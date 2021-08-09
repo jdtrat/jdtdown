@@ -28,7 +28,7 @@ jdtdown is a package that provides [pkgdown](https://pkgdown.r-lib.org/) templat
 
 You can install and load the development version of jdtdown from GitHub as follows:
 
-``` {.r}
+```r
 # Install the development version from GitHub
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("jdtrat/jdtdown")
