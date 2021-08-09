@@ -13,8 +13,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><link href="jdtrat/jdtrat.css" rel="stylesheet">
 <link href="jdtrat/jdtrat-2.css" rel="stylesheet">
-<!-- highlight.js --><link rel="stylesheet" href="highlight/styles/tomorrow-night-blue.min.css">
-<script src="highlight/highlight.min.js"></script><script>hljs.highlightAll();</script><meta property="og:title" content="pkgdown Template for JDT">
+<meta property="og:title" content="pkgdown Template for JDT">
 <meta property="og:description" content="jdtdown is a pkgdown template for packages built by JDT. ">
 <meta property="og:image" content="https://jdtdown.jdtrat.com/reference/figures/logo.png">
 <meta property="og:image:alt" content="jdtdown package">
@@ -128,12 +127,13 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install and load the development version of jdtdown from GitHub as follows:</p>
-<pre class="{.r}"><code># Install the development version from GitHub
-if (!require("remotes")) install.packages("remotes")
-remotes::install_github("jdtrat/jdtdown")
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Install the development version from GitHub</span>
+<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"jdtrat/jdtdown"</span><span class="op">)</span>
 
-# Load package
-library(jdtdown)</code></pre>
+<span class="co"># Load package</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jdtrat/jdtdown">jdtdown</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div id="getting-started" class="section level2">
 <h2 class="hasAnchor">
