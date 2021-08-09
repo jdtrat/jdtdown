@@ -28,7 +28,7 @@
 
 You can install and load the development version of {{{ Package }}} from GitHub as follows:
 
-``` {.r}
+```r
 # Install the development version from GitHub
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("jdtrat/{{{ Package }}}")
